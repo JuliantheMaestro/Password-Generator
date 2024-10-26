@@ -12,14 +12,21 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M",
 
 
 
-function generateCharacters() {
+function generateCharacters(characters, length) {
+    let finalResult = "";
+
+    for (let i = 0; i < length; i++) { 
     let randomCharacter = Math.floor(Math.random() * characters.length)
-    return characters[randomCharacter]
+    finalResult += characters[randomCharacter];
+    }
+
+    return finalResult;
+
 }
 
 function displayCharacters() {
-    firstBox.textContent = generateCharacters();
-    secondBox.textContent = generateCharacters();
+    firstBox.textContent = generateCharacters(characters, 10);
+    secondBox.textContent = generateCharacters(characters, 10);
 }
 
 button.addEventListener("click", displayCharacters)
