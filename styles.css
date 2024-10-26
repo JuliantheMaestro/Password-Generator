@@ -2,6 +2,10 @@ body {
     background-color: #1F2937;
 }
 
+h1 {
+    font-size: 40px;
+}
+
 .box {
     color: #ffdd00;
     font-family: "Karla", sans-serif;
